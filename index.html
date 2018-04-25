@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" />
+    <title>Le message</title>
+    <script src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Base de données ATech</h1>
+      <a v-bind:href="website">Alsace Tech site</a>
+      <input type="text" v-bind:value="job"/>
+      <p v-html="websiteTag"></a>
+      <p>Nom de l'entreprise : {{ name }}</p>
+      <p>Chargé de : {{ job }}</p>
+    </div>
+  </br>
+
+  <div id="app-2">
+    <ol>
+      <li v-for="todo in todos">
+        {{todo.text}}
+      </li>
+    </ol>
+  </div>
+
+  <div id="app-3">
+    <h1>Events</h1>
+    <button v-on:click=add(1)>Add a year</button>
+    <button v-on:click=subtract(1)>Substract a Year</button>
+    <button v-on:dblclick=add(10)>Add ten year</button>
+    <button v-on:dblclick=subtract(10)>Subtract ten year</button>
+    <p>My age is {{ age }}</p>
+
+    <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+
+<!--    <div id="app-4">
+      <h1>Keyboard events</h1>
+      <label> Name:</label>
+      <input type="text" v-on:keyup="logName"/>
+      <label>Age:</label>
+      <input type="text" v-on:keyup="logAge"/>
+    </div> -->
+
+<script src="app.js"></script>
+
+
+  </body>
+</html>
