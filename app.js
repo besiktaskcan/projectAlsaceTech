@@ -1,5 +1,5 @@
 //faire afficher un lien
-var app = new Vue({
+/*var app = new Vue({
   el: '#app',
   data: {
     name: 'Alsace Tech',
@@ -46,13 +46,14 @@ var app3 = new Vue({
       this.y = event.offsetY;
     }
   }
-});
+});*/
 
 //faire afficher deux entré pour écrire
 var app4 = new Vue({
-  el: 'app-4',
+  el: '#app-4',
   data: {
-
+    name: '',
+    age: ''
   },
   methods: {
       logName: function(){
@@ -61,5 +62,67 @@ var app4 = new Vue({
       logAge: function(){
         console.log('you entered your age');
       }
+  }
+});
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    age: 20,
+    a: 2,
+    b: 6
+  },
+  methods: {
+    /*addToA: function(){
+      return this.a + this.age;
+    },
+    addToB: function(){
+      return this.b + this.age;
+    }*/
+  },
+  computed: {
+    addToA: function(){
+      console.log('addToA');
+      return this.a + this.age;
+    },
+    addToB: function(){
+      console.log('addToB');
+      return this.b + this.age;
+    }
+  }
+});
+
+//partie css dynamique qui fait changer la couleur ou
+//rajoute une case en plus lorsqu'on appuie sur les boutons
+var app6 = new Vue({
+  el: '#app-6',
+  data: {
+    available: false,
+    nearby: false,
+  },
+  methods: {
+
+  },
+  computed: {
+    compClasses: function(){
+      return{
+        available: this.available,
+        nearby: this.nearby
+      }
+    }
+  }
+});
+
+var app7 = new Vue({
+  el: '#app-7',
+  data: {
+    error: false,
+    success: false
+  },
+  methods: {
+
+  },
+  computed: {
+
   }
 });
