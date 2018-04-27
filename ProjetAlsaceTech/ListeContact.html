@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Les contacts d'Alsace Tech</title>
+  </head>
+  <body>
+
+    <div id="canvas">
+      <h1>Recherches contact</h1>
+      <div id="liste">
+          <p>Ecole :</p>
+        <select multiple v-model="selectedSearchIndexes">
+          <option value="cname">le cname</option>
+          <option value="ecam">ECAM</option>
+          <option value="ecpm">ECPM</option>
+          <option value="ei">CESI ei.cesi</option>
+          <option value="exia">CESI exia</option>
+          <option value="em">EM Strasbourg</option>
+          <option value="engees">ENGEES</option>
+          <option value="architecture">Strasbourg école d'architecture</option>
+          <option value="ensc">ENSC</option>
+          <option value="ensisa">Ensisa</option>
+          <option value="esbs">ESBS</option>
+          <option value="insa">INSA</option>
+          <option value="telecom">Télécom physique Strasbourg</option>
+          <option value="eost">EOST</option>
+        </select>
+
+
+      <div id="entreprise">
+        <p>Entreprise</p>
+        <input type="text" placeholder="rechercher..." v-bind:value="entreprise"/>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+  </body>
+</html>
